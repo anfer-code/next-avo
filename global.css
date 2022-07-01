@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flexer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.padding-section {
+    padding: 40px 0;
+}
+
+.vh-100 {
+    min-height: 50vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fredoka', sans-serif;
+}
+
+p,
+span,
+button,
+a {
+
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #151515;
+}
+
+.Grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 2rem), 1fr));
+    place-items: center;
+}
+
+.Container-List {
+    padding: 40px 0;
+}
+
+.Card-Container {
+    border: 1px solid #74747485;
+    width: 100%;
+    min-width: 120px;
+    max-width: 350px;
+    min-height: 226px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 9px 0px #00000045;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.Card__Text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    min-height: 65px;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.Card__Text p:last-child {
+    font-weight: 300;
+}
+
+
+@media (min-width: 400px) {
+
+    .Card__Text {
+        min-height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .Grid {
+        row-gap: 50px;
+    }
+}
+
+.Car__Container {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 25px;
+}
+
+.Car__Image {
+    flex-basis: 30%;
+}
+
+.Car__Text {
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Car__Text a,
+.Car__Text p,
+.Car__Text span {
+    margin-bottom: 5px;
+}
+
+.Car__Text a {
+    font-weight: 600;
+}
+
+.Car__Text span {
+    font-size: 14px;
+    color: #9f9f9f;
+}
+
+.Car__Text p {
+    font-size: 12px;
+}
+
+
+.Car__Text button {
+    width: 30px;
+    height: 30px;
+    align-self: end;
+    border: 1px solid #858585;
+    outline: none;
+    font-weight: bold;
+    background: #fff;
+    color: #858585;
+}

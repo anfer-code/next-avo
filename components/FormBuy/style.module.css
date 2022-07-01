@@ -1,0 +1,37 @@
+.button {
+  height: 30px;
+  border-radius: 0 8px 8px 0;
+  outline: none;
+  display: flex;
+  border: 1px solid #d6d6d6;
+  padding: 4px 10px;
+  background: #859027;
+  color: white;
+  font-weight: 600;
+}
+
+.input {
+  height: 30px;
+  border: 1px solid #d5d5d5;
+  padding: 5px 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.visible {
+  visibility: visible;
+
+}
+
+.visible, .invisible {
+  color: #2DC965;
+  font-weight: bold;
+  transition: all 1000ms ease-in;
+}
+
+.invisible {
+  visibility: hidden;
+}
