@@ -5,7 +5,6 @@ const oneAvo = async (req, res) => {
   const data = await Database.getById(id)
 
 
-  res.statusCode = 200
   res.setHeader('Content-type', 'application/json')
 
   res.status(200).json(data)

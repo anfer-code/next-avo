@@ -1,30 +1,32 @@
-import React, { useEffect, useState } from 'react'
-
 import ListOfProducts from '@components/ListOfProducts'
+import Link from 'next/link'
 
-const Home = () => {
+export const getStaticProps = async () => {
 
-  const [productList, setProductList] = useState([])
+  const PROTOCOL = process.env.PROTOCOL
+  const BACKURL = process.env.BACKURL
 
-  useEffect(() => {
-    const controler = new AbortController()
-    const signal = controler.signal
+  const url = `${PROTOCOL}${BACKURL}/api/avo`
 
-    fetch('api/avo', { signal })
-      .then(res => res.json())
-      .then(({ data }) => setProductList(data))
-      .catch(console.log)
-    return () => {
-      controler.abort()
-      console.log('Cancell call')
+  const response = await fetch(url)
+  const { data: productList } = await response.json() 
+
+  return {
+    props: {
+      productList
     }
-  }, [])
+  }
+}
 
+const Home = ({productList = []} = []) => {
 
   return (
     <>
       <h1>AvoStore</h1>
-      <p>Los aguacates del puestico, en tu cocina</p>
+      <p className='Avo__index-text'>Los aguacates del puestico, en tu cocina</p>
+      <Link href="yes-or-no">
+        <a>¿Deberías comer un aguacate hoy?</a>
+      </Link>
       <ListOfProducts products={productList} />
     </>
   )

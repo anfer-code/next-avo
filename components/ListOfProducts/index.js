@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 
 const ListOfProducts = ({ products }) => {
-
   const productsMap = (products) => (
     products.map(({ name, image, price, id }) => (
       <Link key={id} href={`product/${id}`}>

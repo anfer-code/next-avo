@@ -1,7 +1,5 @@
 import React from 'react'
 import Navbar from '@components/Navbar'
-
-import styles from './style.module.css'
 import Footer from '@components/Footer'
 
 const Layout = ({ children }) => {

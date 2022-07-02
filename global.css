@@ -26,7 +26,7 @@
 }
 
 .vh-100 {
-    min-height: 50vh;
+    min-height: calc(100vh - 110px);
 }
 
 h1,
@@ -162,4 +162,83 @@ h1 {
     font-weight: bold;
     background: #fff;
     color: #858585;
+}
+
+.Avo__index-text {
+    margin-bottom: 12px;
+}
+
+.Avo__index-text + a {
+    color: #8787ef;
+}
+
+.yesOrNo h1 {
+    margin-bottom: 30px;
+}
+
+.yesOrNo h3{
+    margin-bottom: 15px;
+    color: #21BA45;
+    font-size: 100px;
+}
+
+.yesOrNo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.yesOrNo div button {
+    border: none;
+    padding: 10px 20px;
+    background-color: #21BA45;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    min-width: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.yesOrNo div a {
+    border: 1px solid #21BA45;
+    padding: 10px 20px;
+    background-color: white;
+    color: #21BA45;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.Total__Container {
+    border: 1px solid #d5d5d5;
+    box-shadow: 1px 1px 5px 0px #d6d6d6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Total__Container p {
+    font-weight: bold;
+}
+
+.Total__Container p span {
+    font-weight: 300;
+}
+
+.Total__Container button {
+    border: 1px solid #d5d5d5;
+    background-color: #151515;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
 }
