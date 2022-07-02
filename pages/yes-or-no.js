@@ -7,7 +7,7 @@ export const getServerSideProps = async (params) => {
 
   const url = `${PROTOCOL}${BACKURL}/api/yes-no`
 
-  const response = await fetch('https://next-avo-dun.vercel.app/api/yes-no')
+  const response = await fetch(url)
   const { randomNum } = await response.json()
 
   return {
