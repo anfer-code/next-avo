@@ -6,9 +6,13 @@ export const getStaticProps = async () => {
   const PROTOCOL = process.env.PROTOCOL
   const BACKURL = process.env.BACKURL
 
+
   const url = `${PROTOCOL}${BACKURL}/api/avo`
 
-  const response = await fetch(url)
+  console.log(url)
+
+
+  const response = await fetch('https://next-avo-dun.vercel.app/api/avo')
   const { data: productList } = await response.json() 
 
   return {
